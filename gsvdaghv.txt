@@ -1,0 +1,64 @@
+
+
+Given - 
+Root node of Binary Tree
+Integer value
+Integer distance
+
+In the given Binary Tree, at most one node can have ‘value’ stored in it.
+Return/print all nodes’ data at a distance ‘distance’ from the node having value ‘value’ stored in it. 
+
+Eg. 
+
+Value = 5
+Distance = 2
+Output = 1, 4, 20, 21, 22, 23
+
+Value = 5
+Distance = 4
+Output = 6, 7, 16, 17, 18, 19
+
+class Node {
+	int data;
+	Node* left;
+	Node* right;
+}
+
+findNodesAtDistance(Node* root, int val, int dist) {
+
+}
+
+
+
+Q2) 
+
+0 0 0 0 1 
+0 0 0 1 1
+0 1 1 1 1
+0 0 1 1 1
+0 0 0 0 0 
+0 1 1 1 1
+
+Filled with 0s & 1s
+Rows are sorted in ascending order.
+Find the row with the maximum number of 1s.
+
+Rows - n
+Columns - m
+
+O(mn)
+
+Q3)
+
+Input - 1 0 0 2 1 0 2 1
+Output - 0 0 0 1 1 1 2 2
+
+O(nlogn)
+
+start - 2
+end - 6
+Cur - 3
+
+0 0 0 1 1 1 2 2
+
+O(n)
