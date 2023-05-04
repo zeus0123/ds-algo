@@ -44,11 +44,20 @@ class SinglyLinkedList {
         }
         return this;
     }
+
+    shift() {
+        if(!this.head) return undefined;
+        let temp = this.head;
+        this.head = temp.next;
+        this.length--;
+        return this;
+
+    }
 }
 
 var list = new SinglyLinkedList();
 list.push('Luggage Car');
 list.push('I am');
 list.push('Software Engineer');
-list.pop();
+list.shift();
 console.log(list);
