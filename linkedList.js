@@ -73,9 +73,13 @@ class LinkedList {
 
         for(let i = 0; i < this.length; i++) {
             next = temp.next;
+            console.log(next);
             temp.next = prev;
+            console.log('next---', temp.next)
             prev = temp;
+            console.log('prev---', prev);
             temp = next;
+            console.log('temp', temp);
         }
 
         return this;

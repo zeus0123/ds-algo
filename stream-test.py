@@ -1,0 +1,18 @@
+import json
+
+import requests
+
+url = "http://localhost:8000/v1.4/recommendation/openai_recommendations"
+
+payload = json.dumps({
+  "type": "stream_test",
+  "title": "Stellantis warns UK risks exodus of EV production under post-Brexit rules"
+})
+headers = {
+  'Content-Type': 'application/json',
+  'Authorization': 'Bearer eyJraWQiOiJpMFdpN0RuVnpRYVhoc3h0TWpwQllMNV9OVzUteGZlU0YwdjUwc2hfLXhvIiwiYWxnIjoiUlMyNTYifQ.eyJ2ZXIiOjEsImp0aSI6IkFULlB1NWJtNG12aVhhamhRUDkxOThleFNHdU9ZZ3BMUEhKeEJoUXUycDRuSXciLCJpc3MiOiJodHRwczovL2Rldi5hdXRoLnRpZmlud2VhbHRoLmNvbS9vYXV0aDIvZGVmYXVsdCIsImF1ZCI6ImFwaTovL2RlZmF1bHQiLCJpYXQiOjE3MDA0NzUyMDYsImV4cCI6MTcwMDQ3ODgwNiwiY2lkIjoiMG9hNWd1dXRiOFp1YVJEVHo1ZDciLCJ1aWQiOiIwMHU2Ympib3N4dUdvSW1nRTVkNyIsInNjcCI6WyJlbWFpbCIsIm9wZW5pZCJdLCJhdXRoX3RpbWUiOjE3MDA0NzUyMDMsInN1YiI6ImhhcmlfYWRtaW5AY2xvdXQuY29tIiwidXVpZCI6InFSa25BeHBmTVZEQkJZRlUwZWlCRSJ9.TXhZOUVRKZgFRdPhE-wCIIsXDusKs-hftDHHWIqaPoSf5DwytDn6yp5XT4pMbNwArolbJ4hwF8cLA9CsyqC1gj_9jkZN0GAjDYNDyxQCZj6r5T8G4WMS5j49xoXv4pZIVM3EuJbmAycv2TrqhlUzPXLnxYntSnqJnFyyGfUxVIvp-TyYaS1xCEKssPBEv_rGWBCVtsAcSpb9lqqEKQYiDEfkwtSqG2etFm674QNu7isYVWqP5wbn-Q50v82ycSzsn7gGfC1641ehoAfTGWAj6e19mzEl0Z7HlxLC7vPAPhYkPzPXarVs3Pk3XUlyd1FH2RxYOTj6GiBYXGckE0950A'
+}
+
+response = requests.request("POST", url, headers=headers, data=payload)
+
+print(response.text)
